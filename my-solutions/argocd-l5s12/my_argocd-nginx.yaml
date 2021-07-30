@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: my-solutions/argocd/deploy-manifests
+    path: my-solutions/argocd-l5s12/nginx-manifests
     repoURL: https://github.com/ebomitali/nd064_course_1 
     targetRevision: HEAD
   syncPolicy: {}
