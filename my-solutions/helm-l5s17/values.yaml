@@ -4,7 +4,7 @@ namespace:
 
 ## define the image to execute with the Deployment 
 image:
-  name: nginx-alpine
+  repository: nginx
   tag: alpine
   imagePullPolicy: IfNotPresent
 
@@ -12,7 +12,7 @@ image:
 replicaCount: 3
 
 resources:
-  request:
+  requests:
     memory: "256Mi"
     cpu: "50m"
   
@@ -21,5 +21,4 @@ service:
   type: ClusterIP
   
 configmap:
-  data:
-    version: "alpine"
+  data: "version: alpine"

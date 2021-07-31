@@ -2,7 +2,7 @@
 apiVersion: v1
 ## The name of the chart. 
 ## In this case,  the chart name is`python-helloworld `.
-name: nginx-deployment 
+name: nginx-helm-deployment 
 ## A single-sentence description of this project
 description: Install Nginx
 keywords:
