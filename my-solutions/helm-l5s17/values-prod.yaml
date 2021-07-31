@@ -12,7 +12,7 @@ image:
 replicaCount: 2
 
 resources:
-  request:
+  requests:
     memory: "256Mi"
     cpu: "70m"
   
