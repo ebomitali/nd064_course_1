@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-alpine
+  name: nginx-alpine-prod
   namespace: argocd
 spec:
   destination:
@@ -13,9 +13,9 @@ spec:
     helm:
       ## define the input values file
       valueFiles:
-      - values-staging.yaml
+      - values-prod.yaml
     ## set the path to the folder where the Helm chart is stored
-    path: my-solutions/helm-l5s17/argocd-helm-nginx-prod.yaml
+    path: my-solutions/helm-l5s17
     ## set the base repository that contains the Helm chart
     repoURL: https://github.com/ebomitali/nd064_course_1 
     targetRevision: HEAD
