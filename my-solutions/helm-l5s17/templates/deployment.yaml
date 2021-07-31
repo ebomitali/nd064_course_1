@@ -7,11 +7,6 @@ metadata:
   name: nginx-alpine
   namespace: {{ .Values.namespace.name }}
 spec:
-  containers:
-    resources:
-      requests:
-        memory: {{ .Values.resources.requests.memory }}
-        cpu: {{ .Values.resources.requests.cpu }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
@@ -30,5 +25,9 @@ spec:
     spec:
       containers:
       - image: nginx:alpine
-        imagePullPolicy: IfNotPresent
-        name: nginx-alpine
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        name: {{ .Values.image.name }}
+        resources:
+          requests:
+            memory: {{ .Values.resources.requests.memory }}
+            cpu: {{ .Values.resources.requests.cpu }}

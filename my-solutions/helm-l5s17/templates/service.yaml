@@ -8,7 +8,7 @@ metadata:
   namespace: {{ .Values.namespace.name }}
 spec:
   ports:
-  - port: 8111
+  - port: {{ .Values.service.port }}
     protocol: TCP
     targetPort: 8111
   selector:
