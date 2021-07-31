@@ -4,9 +4,9 @@ namespace:
 
 ## define the image to execute with the Deployment 
 image:
+  repository: nginx
   name: nginx-alpine
-  tag: 1.18.0
-  imagePullPolicy: IfNotPresent
+  tag: 1.17.0
 
 ## set the number of replicas for an application 
 replicaCount: 2
@@ -18,7 +18,6 @@ resources:
   
 service:
   port: 80
-  type: ClusterIP
   
 configmap:
   data:
